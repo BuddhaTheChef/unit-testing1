@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Simple Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="calculator.js"></script>
+    <script src="mainCalculator.js"></script>
 </head>
 <body>
     Simple Calculator 
-    
+    <input type="text" onchange="calculate(this.value)"/>
+    <div>
+        Result
+        <span id = "result">3</span>
+    </div>
 </body>
 </html>

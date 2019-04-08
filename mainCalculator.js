@@ -6,6 +6,11 @@ function calculate(inputValue) {
     const numberB = parseInt(numbers[1]);
 
     const operation = inputValue.match(expression);
+
+    if (Number.isNaN(numberA) || Number.isNaN(numberB) || operation === null) {
+        updateResult('Operation not recognized');
+        return;
+    }
     
     const calculator = new Calculator();
     calculator.add(numberA);

@@ -5,15 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Simple Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css"/>
     <script src="calculator.js"></script>
     <script src="mainCalculator.js"></script>
 </head>
-<body>
-    Simple Calculator 
-    <input type="text" onchange="calculate(this.value)"/>
-    <div>
-        Result
-        <span id = "result">3</span>
+<body class="body">
+    <h1 class="title">Simple Calculator </h1>
+
+    <input 
+        class="input" 
+        type="text" 
+        title="calculator" 
+        placeholder="Enter operation" 
+        value="1+2" 
+        onchange="calculate(this.value)"/>
+
+    <div class="result-container">
+        <div class="title">Result</div>
+        <span id="result">3</span>
     </div>
 </body>
 </html>

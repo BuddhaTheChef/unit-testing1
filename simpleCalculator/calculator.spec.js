@@ -2,6 +2,9 @@
 //Suites lets you organize specs
 //Specs holds expectations
 
+//to disable a spec just put an x in front of it
+//to disable a suite (all specs) just put an x in front of describe
+
 describe('calculator.js', () => {
 
   it('should add numbers to total', ()=> {
@@ -11,7 +14,7 @@ describe('calculator.js', () => {
     expect(calculator.total).toBe(5)
   });
 
-  it('should subtract numbers to total', ()=> {
+  xit('should subtract numbers to total', ()=> {
     const calculator = new Calculator();
     calculator.total = 10;
     calculator.subtract(5)

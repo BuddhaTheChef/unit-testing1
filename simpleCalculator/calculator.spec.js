@@ -39,11 +39,19 @@ describe('calculator.js', () => {
     expect(calculator.total).toBe(3);
   });
 
-  it('has constructor', () => {
+  it('it can be intatiated', () => {
     const calculator = new Calculator();
     const calculator2 = new Calculator();
     //toBe() wont work like toEqual() because toEqual compares if the refrences are the same
+    expect(calculator).toBeTruthy();
+    expect(calculator2).toBeTruthy();
     expect(calculator).toEqual(calculator2);
+  })
+
+  it('should initialize the total', () => {
+    const calculator = new Calculator();
+    expect(calculator.total).toBe(0);
+    expect(calculator.total).toBeFalsy();
   })
 
 });

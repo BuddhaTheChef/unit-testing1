@@ -72,5 +72,12 @@ describe('calculator.js', () => {
       expect(calculator.multiply).not.toBeUndefined();
 })
 
+it('can overwrite total', ()=>{
+    const calculator = new Calculator();
+
+    calculator.total = null;
+    expect(calculator.total).toBeNull();
+})
+
 
 });

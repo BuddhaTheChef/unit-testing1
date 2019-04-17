@@ -62,4 +62,15 @@ describe('calculator.js', () => {
       expect(calculator1).not.toBe(calculator2);
   })
 
+  //Primitive - Data that is not an object and has no methods
+  it('has common operations', () => {
+      const calculator = new Calculator();
+        //not defined and to be defined
+      expect(calculator.add).toBeDefined();
+      expect(calculator.subtract).toBeDefined();
+      expect(calculator.divide).not.toBeUndefined();
+      expect(calculator.multiply).not.toBeUndefined();
+})
+
+
 });

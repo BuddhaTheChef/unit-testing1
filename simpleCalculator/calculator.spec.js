@@ -46,6 +46,8 @@ describe('calculator.js', () => {
     expect(calculator).toBeTruthy();
     expect(calculator2).toBeTruthy();
     expect(calculator).toEqual(calculator2);
+    //toContain finds if a certain part of a method matches "if Constructor name Calculator contains Calc"
+    expect(calculator.constructor.name).toContain('Calc')
   });
 
   it('should initialize the total', () => {

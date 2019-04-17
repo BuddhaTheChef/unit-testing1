@@ -46,12 +46,20 @@ describe('calculator.js', () => {
     expect(calculator).toBeTruthy();
     expect(calculator2).toBeTruthy();
     expect(calculator).toEqual(calculator2);
-  })
+  });
 
   it('should initialize the total', () => {
     const calculator = new Calculator();
     expect(calculator.total).toBe(0);
     expect(calculator.total).toBeFalsy();
+  });
+
+  it('instantiates a unique object', () => {
+      const calculator1 = new Calculator();
+      const calculator2 = new Calculator();
+    //this negates matchers because they are not the same it will create error
+    //with the "not" keyword it expects them not to be equal so the value will come out truthy
+      expect(calculator1).not.toBe(calculator2);
   })
 
 });

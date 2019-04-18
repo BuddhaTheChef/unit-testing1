@@ -83,11 +83,18 @@ describe('calculator.js', () => {
 
   it('does not handle NaN', () => {
       const calculator = new Calculator();
-
       calculator.total = 20;
       calculator.multiply('a');
 
       expect(calculator.total).toBeNaN();
+  })
+
+  it('handles divide by 0', () => {
+      const calculator = new Calculator();
+
+      expect(()=>{calculator.divide(0)}).toThrow();
+      expect(()=> {calculator.divide(0)}).toThrowError(Error);
+      expect(()=> {calculator.divide(0)}).toThrowError(Error, 'Cannot divide by 0');
   })
 
 

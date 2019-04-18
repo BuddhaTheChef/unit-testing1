@@ -91,11 +91,25 @@ describe('calculator.js', () => {
 
   it('handles divide by 0', () => {
       const calculator = new Calculator();
-
+      // handling specs that throws errors
       expect(()=>{calculator.divide(0)}).toThrow();
       expect(()=> {calculator.divide(0)}).toThrowError(Error);
       expect(()=> {calculator.divide(0)}).toThrowError(Error, 'Cannot divide by 0');
   })
 
+  it('returns total', () => {
+      const calculator = new Calculator();
+
+      calculator.total = 50;
+
+      expect(calculator.add(20)).toBe(70);
+      //checks to see if digits match wheter it be negative or positive
+      expect(calculator.total).toMatch(/-?\d+/);
+      expect(typeof calculator.total).toMatch('number');
+      //asymetric matchers
+      //not equal to each side
+      //jasmine.anything will give you true for everything besides null or undefined
+      expect(calculator.total).toEqual(jasmine.anything());
+  })
 
 });

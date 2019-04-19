@@ -40,9 +40,13 @@ describe('calculator.js', () => {
   });
 
   it('it can be intatiated', () => {
+    //able to import custom matchers with jasmine
+    jasmine.addMatchers(customMatchers);
     const calculator = new Calculator();
     const calculator2 = new Calculator();
     //toBe() wont work like toEqual() because toEqual compares if the refrences are the same
+    expect(calculator).toBeCalculator(); //custom!
+    expect(2).not.toBeCalculator();
     expect(calculator).toBeTruthy();
     expect(calculator2).toBeTruthy();
     expect(calculator).toEqual(calculator2);

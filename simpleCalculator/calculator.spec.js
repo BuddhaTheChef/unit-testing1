@@ -110,6 +110,7 @@ describe('calculator.js', () => {
       //checks to see if digits match wheter it be negative or positive
       expect(calculator.total).toMatch(/-?\d+/);
       expect(typeof calculator.total).toMatch('number');
+      expect (calculator.total).toBeNumber();
       //asymetric matchers
       //not equal to each side
       //jasmine.anything will give you true for everything besides null or undefined

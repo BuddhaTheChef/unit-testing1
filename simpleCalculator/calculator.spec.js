@@ -10,11 +10,20 @@
 
 describe('calculator.js', () => {
   describe('Calculator', () => {
+    let calculator;
+    let calculator2;
+    
+      beforeEach(() => {
+        calculator = new Calculator();
+        calculator2 = new Calculator();
+      });
+
+      afterEach(() => {
+
+      });
     it('it can be intatiated', () => {
         //able to import custom matchers with jasmine
         jasmine.addMatchers(customMatchers);
-        const calculator = new Calculator();
-        const calculator2 = new Calculator();
         //toBe() wont work like toEqual() because toEqual compares if the refrences are the same
         expect(calculator).toBeCalculator(); //custom!
         expect(2).not.toBeCalculator();
@@ -26,22 +35,18 @@ describe('calculator.js', () => {
     });
 
     it('should initialize the total', () => {
-        const calculator = new Calculator();
         expect(calculator.total).toBe(0);
         expect(calculator.total).toBeFalsy();
     });
 
     it('instantiates a unique object', () => {
-        const calculator1 = new Calculator();
-        const calculator2 = new Calculator();
         //this negates matchers because they are not the same it will create error
         //with the "not" keyword it expects them not to be equal so the value will come out truthy
-        expect(calculator1).not.toBe(calculator2);
+        expect(calculator).not.toBe(calculator2);
     })
 
     //Primitive - Data that is not an object and has no methods
     it('has common operations', () => {
-        const calculator = new Calculator();
             //not defined and to be defined
         expect(calculator.add).toBeDefined();
         expect(calculator.subtract).toBeDefined();
@@ -50,7 +55,6 @@ describe('calculator.js', () => {
     })
 
     it('can overwrite total', ()=>{
-        const calculator = new Calculator();
 
         calculator.total = null;
         expect(calculator.total).toBeNull();
@@ -59,14 +63,12 @@ describe('calculator.js', () => {
     describe('add()', () => {
 
         it('should add numbers to total', ()=> {
-            const calculator = new Calculator();
             //expect total to be 5
             calculator.add(5)
             expect(calculator.total).toBe(5)
         });
 
         it('returns total', () => {
-            const calculator = new Calculator();
     
             calculator.total = 50;
     
@@ -84,7 +86,6 @@ describe('calculator.js', () => {
 
     describe('subtract()', () => {
         xit('should subtract numbers to total', ()=> {
-            const calculator = new Calculator();
             calculator.total = 10;
             calculator.subtract(5)
             expect(calculator.total).toBe(5)
@@ -94,7 +95,6 @@ describe('calculator.js', () => {
 
     describe('multiply()', () => {
         it('should multiply numbers to total', ()=> {
-            const calculator = new Calculator();
             calculator.total = 100;
             calculator.multiply(2);
             expect(calculator.total).toBe(200);
@@ -102,7 +102,6 @@ describe('calculator.js', () => {
 
 
         it('does not handle NaN', () => {
-            const calculator = new Calculator();
             calculator.total = 20;
             calculator.multiply('a');
 
@@ -112,13 +111,11 @@ describe('calculator.js', () => {
 
     describe('divide()', () => {
         it('should divide numbers to total', ()=> {
-            const calculator = new Calculator();
             calculator.total = 15;
             calculator.divide(5);
             expect(calculator.total).toBe(3);
         });
         it('handles divide by 0', () => {
-            const calculator = new Calculator();
             // handling specs that throws errors
             expect(()=>{calculator.divide(0)}).toThrow();
             expect(()=> {calculator.divide(0)}).toThrowError(Error);

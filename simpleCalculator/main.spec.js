@@ -20,7 +20,6 @@ describe('main.js', ()=>{
         })
         afterAll(() => {
             //executed just once after everything
-            const element = document.getElementById('result');
 
             document.body.removeChild(element)
         })

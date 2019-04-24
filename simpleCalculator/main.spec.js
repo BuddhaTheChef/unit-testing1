@@ -1,9 +1,29 @@
 describe('main.js', ()=>{
     describe('calculate()', () => {
-        it('validates expression', () => {
+        it('validates expression when the first number is invalid', () => {
             spyOn(window, 'updateResult').and.stub();
-            calculate('a+3')
+            
+            calculate('a+3');
+
+            expect(window.updateResult).toHaveBeenCalled();
         })
+
+        it('validates expression when the second number is invalid', () => {
+            spyOn(window, 'updateResult').and.stub();
+            
+            calculate('3+a');
+
+            expect(window.updateResult).toHaveBeenCalled();
+        })
+
+        it('validates expression when the operation is invalid', () => {
+            spyOn(window, 'updateResult').and.stub();
+            
+            calculate('3@4');
+
+            expect(window.updateResult).toHaveBeenCalled();
+        })
+
         xit('calls add')
         xit('calls subtract')
         xit('calls multiply')

@@ -1,6 +1,9 @@
 describe('main.js', ()=>{
     describe('calculate()', () => {
-        xit('validates expression')
+        it('validates expression', () => {
+            spyOn(window, 'updateResult').and.stub();
+            calculate('a+3')
+        })
         xit('calls add')
         xit('calls subtract')
         xit('calls multiply')

@@ -1,27 +1,31 @@
 describe('main.js', ()=>{
     describe('calculate()', () => {
         it('validates expression when the first number is invalid', () => {
+            //and.stub is the default and can be omitted
             spyOn(window, 'updateResult').and.stub();
             
             calculate('a+3');
 
             expect(window.updateResult).toHaveBeenCalled();
+            expect(window.updateResult).toHaveBeenCalledWith('Operation not recognized')
         })
 
         it('validates expression when the second number is invalid', () => {
-            spyOn(window, 'updateResult').and.stub();
+            spyOn(window, 'updateResult')
             
             calculate('3+a');
 
             expect(window.updateResult).toHaveBeenCalled();
+            expect(window.updateResult).toHaveBeenCalledWith('Operation not recognized')
         })
 
         it('validates expression when the operation is invalid', () => {
-            spyOn(window, 'updateResult').and.stub();
+            spyOn(window, 'updateResult')
             
             calculate('3@4');
 
             expect(window.updateResult).toHaveBeenCalled();
+            expect(window.updateResult).toHaveBeenCalledWith('Operation not recognized')
         })
 
         xit('calls add')

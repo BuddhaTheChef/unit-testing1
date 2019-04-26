@@ -34,10 +34,45 @@ describe('main.js', ()=>{
             expect(window.updateResult).toHaveBeenCalledTimes(1);
         })
 
-        xit('calls add')
-        xit('calls subtract')
-        xit('calls multiply')
-        xit('calls divide')
+        it('calls add', () => {
+            spyOn(Calculator.prototype, 'add');
+
+            calculate('3+4');
+
+            expect(Calculator.prototype.add).toHaveBeenCalledTimes(2);
+            expect(Calculator.prototype.add).toHaveBeenCalledWith(3);
+            expect(Calculator.prototype.add).toHaveBeenCalledWith(4);
+        })
+
+        it('calls subtract', () => {
+            const spy = spyOn(Calculator.prototype, 'subtract');
+
+            calculate('3-7')
+
+            expect(spy).toHaveBeenCalled();
+            expect(spy).toHaveBeenCalledWith(7);
+        })
+
+        it('calls multiply', () => {
+            const spy = spyOn(Calculator.prototype, 'multiply');
+
+            calculate('3*4')
+        
+            expect(spy).toHaveBeenCalled();
+            expect(spy).not.toHaveBeenCalledWith(3);
+            expect(spy).toHaveBeenCalledWith(4);
+        })
+
+        it('calls divide', () => {
+            const spy = spyOn(Calculator.prototype, 'divide');
+
+            calculate('9/3')
+
+            expect(spy).toHaveBeenCalled();
+            expect(spy).not.toHaveBeenCalledWith(9);
+            expect(spy).toHaveBeenCalledWith(3);
+        })
+
         xit('validates operation')
         xit('calls updateResult')
     });

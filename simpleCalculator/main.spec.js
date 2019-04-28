@@ -82,6 +82,18 @@ describe('main.js', ()=>{
             expect(window.updateResult).toHaveBeenCalled();
             expect(window.updateResult).toHaveBeenCalledWith(25);
         })
+
+        it('calls updateResult (example using and.callFake)', () => {
+            spyOn(window, 'updateResult');
+            spyOn(Calculator.prototype, 'multiply').and.callFake((number) => {
+                return 'it works'
+            });
+
+            calculate('5*5');
+
+            expect(window.updateResult).toHaveBeenCalled();
+            expect(window.updateResult).toHaveBeenCalledWith('it works');
+        })
     });
 
     describe('updateResult()', () => {

@@ -114,6 +114,12 @@ describe('main.js', ()=>{
             expect(window.updateResult).toHaveBeenCalled();
             expect(window.updateResult).toHaveBeenCalledWith('whatever [add] returns');
         })
+        
+        it('does not handle errors', () => {
+            spyOn(Calculator.prototype, 'multiply').and.throwError('Some Error');
+
+            expect(() => {calculate('5*5')}).toThrowError('Some Error');
+        })
     });
 
     describe('updateResult()', () => {

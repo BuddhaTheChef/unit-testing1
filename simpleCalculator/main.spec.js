@@ -141,4 +141,19 @@ describe('main.js', ()=>{
             expect(element.innerText).toBe('5')
         })
     })
+
+    describe('showVersion()', () => {
+        it('calls calculator.version', () => {
+            spyOn(document, 'getElementById').and.returnValue({
+                innerText: null
+            });
+
+            //save the spyOnProperty save it to a variable so you can refrence it later
+            const spy = spyOnProperty(Calculator.prototype, 'version', 'get');
+
+            showVersion();
+
+            expect(spy).toHaveBeenCalled();
+        })
+    })
 })

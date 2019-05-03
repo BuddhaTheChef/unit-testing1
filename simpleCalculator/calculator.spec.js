@@ -124,16 +124,16 @@ describe('calculator.js', () => {
     })
 
     describe('get version', () => {
-        it('fetches version from external source', function(done) {
+        it('fetches version from external source', async function(done) {
             spyOn(window, 'fetch').and.returnValue(Promise.resolve(
                 new Response('{"version": "0.1"}')
             ));
 
-            calculator.version.then(function(version) {
+            const version = await calculator.version;
                 expect(version).toBe('0.1');
 
                 done();
-            })
+        
         })
     })
  })

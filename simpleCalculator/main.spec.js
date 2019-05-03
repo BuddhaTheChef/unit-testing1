@@ -142,14 +142,16 @@ describe('main.js', ()=>{
         })
     })
 
-    xdescribe('showVersion()', () => {
+    describe('showVersion()', () => {
         it('calls calculator.version', () => {
             spyOn(document, 'getElementById').and.returnValue({
                 innerText: null
             });
 
             //save the spyOnProperty save it to a variable so you can refrence it later
-            const spy = spyOnProperty(Calculator.prototype, 'version', 'get');
+            const spy = spyOnProperty(Calculator.prototype, 'version', 'get').and.returnValue(
+                Promise.resolve()
+            )
 
             showVersion();
 

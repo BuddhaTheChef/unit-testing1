@@ -12,7 +12,7 @@ describe('calculator.js', () => {
   describe('Calculator', () => {
     let calculator;
     let calculator2;
-    
+
       beforeEach(() => {
         calculator = new Calculator();
         calculator2 = new Calculator();
@@ -120,6 +120,20 @@ describe('calculator.js', () => {
             expect(()=>{calculator.divide(0)}).toThrow();
             expect(()=> {calculator.divide(0)}).toThrowError(Error);
             expect(()=> {calculator.divide(0)}).toThrowError(Error, 'Cannot divide by 0');
+        })
+    })
+
+    describe('get version', () => {
+        it('fetches version from external source', function(done) {
+            spyOn(window, 'fetch').and.returnValue(Promise.resolve(
+                new Response('{"version": "0.1"}')
+            ));
+
+            calculator.version.then(function(version) {
+                expect(version).toBe('0.1');
+
+                done();
+            })
         })
     })
  })

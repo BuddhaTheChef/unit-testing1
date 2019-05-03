@@ -142,7 +142,7 @@ describe('main.js', ()=>{
         })
     })
 
-    describe('showVersion()', () => {
+    xdescribe('showVersion()', () => {
         it('calls calculator.version', () => {
             spyOn(document, 'getElementById').and.returnValue({
                 innerText: null

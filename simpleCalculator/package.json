@@ -1,0 +1,11 @@
+{
+  "name": "simplecalculator",
+  "version": "0.1.0",
+  "description": "",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "author": "Aj Wietecha",
+  "license": "ISC"
+}

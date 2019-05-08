@@ -1,7 +1,7 @@
 module.exports = function(config) {
     config.set({
         frameworks: ['jasmine', 'jasmine-matchers'],
-        preprocessers: {
+        preprocessors: {
             '*.js': ['coverage']
         },
         files: [

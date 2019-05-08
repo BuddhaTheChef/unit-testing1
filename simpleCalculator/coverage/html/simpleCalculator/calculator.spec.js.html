@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for simpleCalculator/calculator.spec.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">simpleCalculator/</a> calculator.spec.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95.83% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>69/72</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95.65% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>66/69</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//Suite is a group of Specs(tests)
+//Suites lets you organize specs
+//Specs holds expectations
+&nbsp;
+//to disable a spec just put an x in front of it
+//to disable a suite (all specs) just put an x in front of describe
+&nbsp;
+//a matcher is just a function(boolean comparison between an expected value vs the actual value)
+// matcher is responsible to report to jasmine if the expected values is a passing or failing spec
+&nbsp;
+describe('calculator.js', () =&gt; {
+  describe('Calculator', () =&gt; {
+    let calculator;
+    let calculator2;
+&nbsp;
+      beforeEach(() =&gt; {
+        calculator = new Calculator();
+        calculator2 = new Calculator();
+      });
+&nbsp;
+      afterEach(() =&gt; {
+&nbsp;
+      });
+    it('it can be intatiated', () =&gt; {
+        //able to import custom matchers with jasmine
+        jasmine.addMatchers(customMatchers);
+        //toBe() wont work like toEqual() because toEqual compares if the refrences are the same
+        expect(calculator).toBeCalculator(); //custom!
+        expect(2).not.toBeCalculator();
+        expect(calculator).toBeTruthy();
+        expect(calculator2).toBeTruthy();
+        expect(calculator).toEqual(calculator2);
+        //toContain finds if a certain part of a method matches "if Constructor name Calculator contains Calc"
+        expect(calculator.constructor.name).toContain('Calc')
+    });
+&nbsp;
+    it('should initialize the total', () =&gt; {
+        expect(calculator.total).toBe(0);
+        expect(calculator.total).toBeFalsy();
+    });
+&nbsp;
+    it('instantiates a unique object', () =&gt; {
+        //this negates matchers because they are not the same it will create error
+        //with the "not" keyword it expects them not to be equal so the value will come out truthy
+        expect(calculator).not.toBe(calculator2);
+    })
+&nbsp;
+    //Primitive - Data that is not an object and has no methods
+    it('has common operations', () =&gt; {
+            //not defined and to be defined
+        expect(calculator.add).toBeDefined();
+        expect(calculator.subtract).toBeDefined();
+        expect(calculator.divide).not.toBeUndefined();
+        expect(calculator.multiply).not.toBeUndefined();
+    })
+&nbsp;
+    it('can overwrite total', ()=&gt;{
+&nbsp;
+        calculator.total = null;
+        expect(calculator.total).toBeNull();
+    })
+&nbsp;
+    describe('add()', () =&gt; {
+&nbsp;
+        it('should add numbers to total', ()=&gt; {
+            //expect total to be 5
+            calculator.add(5)
+            expect(calculator.total).toBe(5)
+        });
+&nbsp;
+        it('returns total', () =&gt; {
+    
+            calculator.total = 50;
+    
+            expect(calculator.add(20)).toBe(70);
+            //checks to see if digits match wheter it be negative or positive
+            expect(calculator.total).toMatch(/-?\d+/);
+            expect(typeof calculator.total).toMatch('number');
+            expect (calculator.total).toBeNumber();
+            //asymetric matchers
+            //not equal to each side
+            //jasmine.anything will give you true for everything besides null or undefined
+            expect(calculator.total).toEqual(jasmine.anything());
+        })
+    })
+&nbsp;
+    describe('subtract()', () =&gt; {
+        xit('should subtract numbers to total', ()=&gt; {
+<span class="cstat-no" title="statement not covered" >            calculator.total = 10;</span>
+<span class="cstat-no" title="statement not covered" >            calculator.subtract(5)</span>
+<span class="cstat-no" title="statement not covered" >            expect(calculator.total).toBe(5)</span>
+        });
+    
+    })
+&nbsp;
+    describe('multiply()', () =&gt; {
+        it('should multiply numbers to total', ()=&gt; {
+            calculator.total = 100;
+            calculator.multiply(2);
+            expect(calculator.total).toBe(200);
+        });
+&nbsp;
+&nbsp;
+        it('does not handle NaN', () =&gt; {
+            calculator.total = 20;
+            calculator.multiply('a');
+&nbsp;
+            expect(calculator.total).toBeNaN();
+        })
+    })
+&nbsp;
+    describe('divide()', () =&gt; {
+        it('should divide numbers to total', ()=&gt; {
+            calculator.total = 15;
+            calculator.divide(5);
+            expect(calculator.total).toBe(3);
+        });
+        it('handles divide by 0', () =&gt; {
+            // handling specs that throws errors
+            expect(()=&gt;{calculator.divide(0)}).toThrow();
+            expect(()=&gt; {calculator.divide(0)}).toThrowError(Error);
+            expect(()=&gt; {calculator.divide(0)}).toThrowError(Error, 'Cannot divide by 0');
+        })
+    })
+&nbsp;
+    describe('get version', () =&gt; {
+        it('fetches version from external source', function(done) {
+            spyOn(window, 'fetch').and.returnValue(Promise.resolve(
+                new Response('{"version": "0.1"}')
+            ));
+&nbsp;
+            calculator.version.then((version) =&gt; {
+                expect(version).toBe('0.1');
+&nbsp;
+                done();
+            }) 
+        })
+    })
+ })
+});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue May 07 2019 17:33:11 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

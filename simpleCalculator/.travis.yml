@@ -1,1 +1,14 @@
 language: node.js
+node_js: 
+  - "10.14.2"
+install: 
+  - npm install
+script: 
+  - npm test
+addons:
+  chrome: stable
+before_install:
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=922 http://localhost &
+before script: 
+  - "sudo chown root /opt/google/chrome/chrome-sanbox"
+  - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
